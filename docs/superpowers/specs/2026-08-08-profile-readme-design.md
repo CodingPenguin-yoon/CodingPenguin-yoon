@@ -60,7 +60,7 @@ I build cloud platforms and operational tools that make infrastructure delivery 
 
 An AI-assisted Kubernetes platform that unified deployment, rollback, monitoring, and infrastructure operations.
 
-Owned the infrastructure end-to-end across Kubernetes and GitOps, while contributing to backend components for deployment automation.
+Owned the project's infrastructure end-to-end, including Kubernetes and GitOps, while contributing to selected backend components for deployment automation.
 
 `Kubernetes` · `GitOps` · `Argo CD` · `NCP` · `FastAPI` · `Prometheus`
 
