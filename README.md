@@ -19,7 +19,7 @@ Owned the project's infrastructure end-to-end, including Kubernetes and GitOps, 
 
 `Kubernetes` · `GitOps` · `Argo CD` · `NCP` · `FastAPI` · `Prometheus`
 
-### 02 — [Heimdall](https://github.com/CodingPenguin-yoon/Heimdall)
+### 02 — [Heimdall](https://github.com/CodingPenguin-yoon/Heimdall_final)
 *Productization · Personal Project*
 
 A Git-based preview deployment manager built to make deployment, release history, logs, and rollback easier to operate.
