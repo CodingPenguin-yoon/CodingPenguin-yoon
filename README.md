@@ -16,7 +16,7 @@ _Git-based Preview deployment · Personal project · Alpha_
 
 A self-hosted deployment manager that builds the `main` commit of a public GitHub repository as an isolated Docker candidate and promotes it to a stable Preview route only after health and route checks pass.
 
-Failed candidates do not replace the last-known-good Preview. If the runtime state cannot be determined safely, the resources are preserved for reconciliation instead of being deleted automatically.
+The normal deployment path keeps a failed candidate from replacing the active Preview. Ambiguous runtime states remain non-success and require reconciliation.
 
 `Python` · `FastAPI` · `Docker` · `NGINX` · `PostgreSQL` · `React`
 
@@ -38,7 +38,7 @@ My contribution focused on Gemini-based command interpretation and Kubernetes st
 
 _Proxmox operations and risk console · Personal project · In progress_
 
-A human-facing Proxmox operations and risk console. It reads live inventory, distinguishes development fallback data, and records intent, permissions, execution, task, and post-check state.
+A Proxmox operations and risk console that reads live inventory and records operation intent, action-specific acknowledgements or approvals, execution events, and post-checks. Product runtime reports `unconfigured`, `live`, or `degraded` connection state and does not fall back to demo inventory.
 
 VM creation requires approval and final acknowledgement, while VM Start uses explicit acknowledgement and idempotency protection. Both operations track the Proxmox task and resulting state instead of treating an API response as final success.
 
