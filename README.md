@@ -1,51 +1,60 @@
-# Cho YunHo | Cloud & Platform Engineer
+# Yunho Cho | Platform Engineer
 
-I build cloud platforms and operational tools that make infrastructure delivery safer, repeatable, and easier to understand.
+I build deployment and operations platforms that standardize infrastructure changes, verify their outcomes, and preserve a clear recovery path.
 
-## What I Build
+## Focus
 
-- Cloud platforms and internal developer tooling
-- Git-driven deployment and operations workflows
-- Safe, observable automation for Kubernetes and Proxmox environments
+- Git-driven deployment workflows from a public repository's fixed `main` branch to a healthy Preview
+- API-based Kubernetes and Proxmox operations with explicit execution boundaries
+- Health checks, task tracking, failure handling, and operational history
 
-## Platform Engineering Journey
+## Selected Projects
 
-### 01 — [K-Le-PaaS](https://github.com/K-Le-PaaS/backend-hybrid)
-*Foundation · Team Project*
+### 01 — [Heimdall](https://github.com/CodingPenguin-yoon/heimdall_final)
 
-An AI-assisted Kubernetes platform that unified deployment, rollback, monitoring, and infrastructure operations.
+_Git-based Preview deployment · Personal project · Alpha_
 
-Owned the project's infrastructure end-to-end, including Kubernetes and GitOps, while contributing to selected backend components for deployment automation.
+A self-hosted deployment manager that builds the `main` commit of a public GitHub repository as an isolated Docker candidate and promotes it to a stable Preview route only after health and route checks pass.
 
-`Kubernetes` · `GitOps` · `Argo CD` · `NCP` · `FastAPI` · `Prometheus`
+Failed candidates do not replace the last-known-good Preview. If the runtime state cannot be determined safely, the resources are preserved for reconciliation instead of being deleted automatically.
 
-### 02 — [Heimdall_final](https://github.com/CodingPenguin-yoon/Heimdall_final)
-*Productization · Personal Project*
+`Python` · `FastAPI` · `Docker` · `NGINX` · `PostgreSQL` · `React`
 
-A Git-based preview deployment manager built to make deployment, release history, logs, and rollback easier to operate.
+[Repository](https://github.com/CodingPenguin-yoon/heimdall_final) · [Case study](https://yoonman.page/projects/heimdall)
 
-Applied the platform engineering lessons from K-Le-PaaS to build a focused and reproducible delivery workflow.
+### 02 — [K-Le-PaaS](https://github.com/K-Le-PaaS/backend-hybrid)
 
-`Python` · `Docker` · `Git` · `FastAPI`
+_AI-assisted Kubernetes operations · Team project · Sep–Dec 2025_
+
+The team built a cloud operations platform that connects web and Slack requests to Kubernetes operations, NCP deployment pipelines, monitoring, and notifications.
+
+My contribution focused on Gemini-based command interpretation and Kubernetes status, log, external URL, restart, scaling, version rollback, and resource operations (PR #28); Prometheus-based NKS metric APIs and a WebSocket endpoint (PR #42); and per-user and repository service URL generation, storage, and lookup in the NCP SourceDeploy flow (PR #63).
+
+`Kubernetes` · `Gemini` · `FastAPI` · `Prometheus` · `NCP`
+
+[PR #28 — NLP / Kubernetes](https://github.com/K-Le-PaaS/backend-hybrid/pull/28) · [PR #42 — Monitoring](https://github.com/K-Le-PaaS/backend-hybrid/pull/42) · [PR #63 — Deployment URL](https://github.com/K-Le-PaaS/backend-hybrid/pull/63) · [Case study](https://yoonman.page/projects/klepaas)
 
 ### 03 — [Gjallar](https://github.com/CodingPenguin-yoon/Gjallar)
-*Specialization · Personal Project*
 
-A human-facing Proxmox operations and risk console, separated from Heimdall as infrastructure lifecycle concerns grew.
+_Proxmox operations and risk console · Personal project · In progress_
 
-Built around approval-gated operations, auditable execution, migration tracking, and reconciliation.
+A human-facing Proxmox operations and risk console. It reads live inventory, distinguishes development fallback data, and records intent, permissions, execution, task, and post-check state.
 
-`Proxmox` · `FastAPI` · `React` · `PostgreSQL` · `Docker`
+VM creation requires approval and final acknowledgement, while VM Start uses explicit acknowledgement and idempotency protection. Both operations track the Proxmox task and resulting state instead of treating an API response as final success.
+
+`Proxmox VE` · `FastAPI` · `React` · `PostgreSQL` · `Docker`
+
+[Repository](https://github.com/CodingPenguin-yoon/Gjallar) · [Case study](https://yoonman.page/projects/gjallar)
 
 ## Core Stack
 
-- **Platform:** Kubernetes, Proxmox VE, Docker, GitOps, Argo CD
-- **Cloud & Delivery:** Naver Cloud Platform, Helm, GitHub Actions
-- **Backend:** Python, FastAPI, PostgreSQL, Redis
-- **Frontend:** TypeScript, React, Next.js
-- **Observability:** Prometheus, Grafana
+- **Platform / Runtime:** Linux, Docker, Kubernetes, Proxmox VE, Naver Cloud Platform
+- **Backend / Data:** Python, FastAPI, PostgreSQL, REST APIs, WebSocket
+- **Delivery / Observability:** Git, NGINX, Prometheus, GitHub Actions
+- **Network / Storage:** IPFire, WireGuard, reverse proxy, NFS, NAS
 
 ## Portfolio & Contact
 
 - **Portfolio:** [yoonman.page](https://yoonman.page)
+- **Resume:** [yoonman.page/resume](https://yoonman.page/resume)
 - **Email:** [code.penguin.yoon@gmail.com](mailto:code.penguin.yoon@gmail.com)
