@@ -48,8 +48,8 @@ VM creation requires approval and final acknowledgement, while VM Start uses exp
 
 ## Core Stack
 
-- **Platform / Runtime:** Linux, Docker, Kubernetes, Proxmox VE, Naver Cloud Platform
-- **Backend / Data:** Python, FastAPI, PostgreSQL, REST APIs, WebSocket
+- **Platform / Runtime:** Linux, Docker, Kubernetes, Proxmox VE
+- **Backend / Data:** Python, FastAPI, PostgreSQL, REST APIs
 - **Delivery / Observability:** Git, NGINX, Prometheus, GitHub Actions
 - **Network / Storage:** IPFire, WireGuard, reverse proxy, NFS, NAS
 
